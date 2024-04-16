@@ -21,4 +21,6 @@ urlpatterns = [
     path('matricula.html', MatriculasView.as_view(), name='matricula'),
     path('frequencia.html', FrequenciasView.as_view(), name='frequencia'),
     path('disciplinacurso.html', DisciplinasView.as_view(), name='disciplina_curso'),
+    path('tiposavaliacao.html', TiavaliacoesView.as_view(), name='tiavaliacao'),
+    path('ocorrencias.html', OcorrenciasView.as_view(), name='ocorrencia'),
 ]

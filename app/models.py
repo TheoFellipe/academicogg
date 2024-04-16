@@ -123,4 +123,25 @@ class Turma(models.Model):
     class Meta:
         verbose_name = "Turma"
         verbose_name_plural = "Turmas"
+
+class Tiavaliacao(models.Model):
+    nome = models.CharField(max_length=100, verbose_name="Nome do tipo de avaliação")
+    def __str__(self):
+        return f"{self.nome}"
+    class Meta:
+        verbose_name = "Tipo de avaliação"
+        verbose_name_plural = "Tipos de avaliações"
+
+class Ocorrencia(models.Model):
+    descricao = models.CharField(max_length=100, verbose_name="Nome da descricao")
+    Curso = models.ForeignKey(Curso, on_delete=models.CASCADE,verbose_name="Frequencia do curso")
+    Disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE,verbose_name="Frequencia da disciplina")
+    Pessoa = models.ForeignKey(Pessoa, on_delete=models.CASCADE,verbose_name="Frequencia da pessoa")
+    data = models.DateField(verbose_name="Data")
+    def __str__(self):
+        return f"{self.descricao},{self.Curso},{self.Disciplina},{self.Pessoa},{self.data}"
+    class Meta:
+        verbose_name = "Ocorrencia"
+        verbose_name_plural = "Ocorrencias"
+        
         

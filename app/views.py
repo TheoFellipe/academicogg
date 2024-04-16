@@ -60,3 +60,11 @@ class TurmasView(View):
     def get(self, request, *args, **kwargs):
         Turmas = Turma.objects.all()
         return render(request, 'turma.html', {'turmas': Turmas})
+class TiavaliacoesView(View):
+    def get(self, request, *args, **kwargs):
+        Tiavaliacoes = Tiavaliacao.objects.all()
+        return render(request, 'tiposavaliacao.html', {'tiavaliacoes': Tiavaliacoes})
+class OcorrenciasView(View):
+    def get(self, request, *args, **kwargs):
+        Ocorrencias = Ocorrencia.objects.all()
+        return render(request, 'ocorrencias.html', {'Ocorrencias': Ocorrencias})

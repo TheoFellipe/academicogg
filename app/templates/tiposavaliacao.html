@@ -10,7 +10,7 @@
 
 <div class="container mt-5">
 <button class="btn btn-warning mt-5" onclick="window.location.href='/admin/'">Django Admin</button>
-    <h1 class="text-center">Períodos</h1>
+    <h1 class="text-center">Tipos de avaliacao</h1>
     <table class="table table-info">
         <thead>
             <tr>
@@ -18,9 +18,9 @@
             </tr>
         </thead>
         <tbody>
-        {% for periodocursos in periodocursos %}
+        {% for tiavaliacoes in tiavaliacoes %}
             <tr>
-                <td>{{ periodocursos.nome}}</td>
+                <td>{{ tiavaliacoes.nome}}</td>
             </tr>
         {% endfor %}
 

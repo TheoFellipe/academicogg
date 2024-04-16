@@ -10,17 +10,25 @@
 
 <div class="container mt-5">
 <button class="btn btn-warning mt-5" onclick="window.location.href='/admin/'">Django Admin</button>
-    <h1 class="text-center">Períodos</h1>
+    <h1 class="text-center">Ocorrencia</h1>
     <table class="table table-info">
         <thead>
             <tr>
-                <th>Nome</th>
+                <th>Descricao</th>
+                <th>Curso</th>
+                <th>Disciplina</th>
+                <th>Pessoa</th>
+                <th>Data</th>
             </tr>
         </thead>
         <tbody>
-        {% for periodocursos in periodocursos %}
+        {% for Ocorrencias in Ocorrencias %}
             <tr>
-                <td>{{ periodocursos.nome}}</td>
+                <td>{{ Ocorrencias.descricao}}</td>
+                <td>{{ Ocorrencias.Curso}}</td>
+                <td>{{ Ocorrencias.Disciplina}}</td>
+                <td>{{ Ocorrencias.Pessoa}}</td>
+                <td>{{ Ocorrencias.data}}</td>
             </tr>
         {% endfor %}
 
